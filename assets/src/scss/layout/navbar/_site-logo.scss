@@ -1,0 +1,35 @@
+.site-logo {
+  line-height: $menu-height-small;
+
+  @include large-and-up {
+    line-height: $menu-height-large;
+  }
+
+  img {
+    height: 26px;
+  }
+
+  @include large-and-up {
+    margin-inline-start: calc((100vw - 960px) / 2);
+  }
+
+  @include x-large-and-up {
+    margin-inline-start: calc((100vw - 1140px) / 2);
+  }
+
+  @include xx-large-and-up {
+    margin-inline-start: calc((100vw - 1320px) / 2);
+  }
+
+  .navigation-bar_min & {
+    line-height: $min-height;
+
+    img {
+      height: 18px;
+    }
+
+    @include large-and-up {
+      margin-inline-start: 36px;
+    }
+  }
+}

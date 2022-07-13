@@ -1,0 +1,189 @@
+/* Generates mutilevel nested comments
+level-1 is the first level comment with a margin of 50px
+level-2 is the first level comment with a margin of 100px
+and so on...
+*/
+:root {
+  --top-navigation--background: #fff;
+  --nav-link--color: #23292d;
+}
+
+@font-face {
+  font-family: "Zodiac Stencil Bulgarian";
+  font-style: normal;
+  src: url("../../fonts/Zodiac Stencil Bulgarian.otf") format("opentype");
+}
+@font-face {
+  font-family: "Zodiac Sans";
+  font-style: normal;
+  src: url("../../fonts/Zodiac Sans.otf") format("opentype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  src: url("../../fonts/Poppins-Regular.ttf") format("truetype");
+}
+.country-dropdown-toggle {
+  cursor: pointer;
+  border: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color 100ms;
+  transition: color 100ms;
+}
+.country-dropdown-toggle _-- {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #042233;
+}
+.country-dropdown-toggle _--:focus {
+  color: #fff;
+}
+.country-dropdown-toggle _--:hover {
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .country-dropdown-toggle _-- {
+    background-color: transparent;
+  }
+}
+.country-dropdown-toggle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: url("../../images/down-arrow-white.svg") no-repeat center center;
+  background-size: contain;
+  display: inline-block;
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+}
+.country-dropdown-toggle[aria-expanded=true]::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.country-list {
+  display: none;
+  text-transform: none;
+  padding: 1.4em 0;
+  overflow-y: hidden;
+  top: 60px;
+}
+.country-list _-- {
+  background: #042233;
+  line-height: 1.5;
+}
+.country-list.open {
+  display: block;
+  overflow-y: scroll !important;
+}
+.country-list a {
+  display: block;
+}
+.country-list a _-- {
+  color: #fff;
+}
+.country-list .active a {
+  text-decoration: underline;
+}
+.country-list .country-group-letter {
+  position: absolute;
+  line-height: 1.5;
+  margin-left: -25px;
+}
+.country-list .country-group-letter _-- {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6f7376;
+}
+html[dir=rtl] .country-list .country-group-letter {
+  margin-right: -25px;
+  margin-left: 0;
+  text-transform: lowercase;
+}
+@media (min-width: 992px) {
+  .country-list .country-group-letter {
+    margin-left: -25px;
+  }
+  html[dir=rtl] .country-list .country-group-letter {
+    margin-left: 0;
+    margin-right: -25px;
+  }
+}
+.country-list > ul {
+  padding: 0 0 2em;
+  margin-top: 1.5em;
+}
+.country-list > a,
+.country-list li {
+  position: relative;
+  list-style: none;
+  padding-left: 50px;
+  font-size: 1rem;
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid;
+}
+html[dir=rtl] .country-list > a,
+html[dir=rtl] .country-list li {
+  padding-left: 0;
+  padding-right: 50px;
+}
+@media (min-width: 992px) {
+  .country-list > a,
+.country-list li {
+    padding-left: 2em;
+  }
+  html[dir=rtl] .country-list > a,
+html[dir=rtl] .country-list li {
+    padding-right: 2em;
+    padding-left: 0;
+  }
+}
+.country-list > a ul,
+.country-list li ul {
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid;
+  padding: 0;
+  margin: 0 1em 1.2em 0;
+}
+html[dir=rtl] .country-list > a ul,
+html[dir=rtl] .country-list li ul {
+  margin: 0 0 1.2em 1em;
+}
+.country-list > a li,
+.country-list li li {
+  padding-left: 0;
+  list-style: none;
+}
+html[dir=rtl] .country-list > a li,
+html[dir=rtl] .country-list li li {
+  padding-right: 0;
+}
+@media (min-width: 992px) {
+  .country-list {
+    max-height: calc(100vh - 3.75rem);
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: hidden !important;
+    padding: 2em 4em 4em;
+  }
+  .country-list --country-list-- {
+    height: 344px;
+    width: 80%;
+    left: 10%;
+  }
+  .admin-bar .country-list {
+    max-height: calc(100vh - 3.75rem - 32px);
+  }
+  .country-list > ul {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}

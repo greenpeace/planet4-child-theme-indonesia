@@ -1,0 +1,42 @@
+/*
+Error: Invalid CSS after "...ily: #{$zodiac}": expected "}", was "!important;"
+        on line 44 of /home/koko/p4/planet4-docker-compose/persistence/app/public/wp-content/themes/planet4-child-theme-indonesia/assets/src/scss/style.scss
+
+39:   --button-secondary--hover--background: #6dbd44;
+40:   --button-primary--background: #ece820;
+41:   --button-primary--color: #{$grey};
+42:   --body--font-family: #{$poppins};
+43:   --body--font-size: 18px;
+44:   --headings--font-family: #{$zodiac}!important;
+45:   --text--line-height: 1.8;
+46: }
+47: 
+48: .fullpage {
+49:   height: 100vh;
+
+Backtrace:
+/home/koko/p4/planet4-docker-compose/persistence/app/public/wp-content/themes/planet4-child-theme-indonesia/assets/src/scss/style.scss:44
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:679:in `block'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/usr/share/koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/usr/share/koala/bin/sass:22:in `load'
+/usr/share/koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ily: #{$zodiac}\": expected \"}\", was \"!important;\"\A         on line 44 of /home/koko/p4/planet4-docker-compose/persistence/app/public/wp-content/themes/planet4-child-theme-indonesia/assets/src/scss/style.scss\A \A 39:   --button-secondary--hover--background: #6dbd44;\A 40:   --button-primary--background: #ece820;\A 41:   --button-primary--color: #{$grey};\A 42:   --body--font-family: #{$poppins};\A 43:   --body--font-size: 18px;\A 44:   --headings--font-family: #{$zodiac}!important;\A 45:   --text--line-height: 1.8;\A 46: }\A 47: \A 48: .fullpage {\A 49:   height: 100vh;"; }

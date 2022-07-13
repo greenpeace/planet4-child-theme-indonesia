@@ -1,0 +1,10 @@
+{% extends "jkb/base.twig" %}
+
+{% block content %}
+	<div class="container-fluid jkb-page {{ (post_slug != '') ? 'jkb-subpage' : '' }}" id="fullpage" data-order="1" data-page="{{ post_slug }}">
+		{{ post.content|raw }}
+		<div class="section fp-auto-height">
+			{% include 'jkb/blocks/footer.twig' with { 'nav_type' : custom_styles.nav_type } %}
+		</div/
+	</div>
+{% endblock %}

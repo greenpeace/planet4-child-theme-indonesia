@@ -1,0 +1,223 @@
+/* Generates mutilevel nested comments
+level-1 is the first level comment with a margin of 50px
+level-2 is the first level comment with a margin of 100px
+and so on...
+*/
+:root {
+  --top-navigation--background: #fff;
+  --nav-link--color: #23292d;
+}
+
+@font-face {
+  font-family: "Zodiac Stencil Bulgarian";
+  font-style: normal;
+  src: url("../../fonts/Zodiac Stencil Bulgarian.otf") format("opentype");
+}
+@font-face {
+  font-family: "Zodiac Sans";
+  font-style: normal;
+  src: url("../../fonts/Zodiac Sans.otf") format("opentype");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  src: url("../../fonts/Poppins-Regular.ttf") format("truetype");
+}
+#country-selector {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  text-align: start;
+  width: 100%;
+}
+#country-selector _-- {
+  color: inherit;
+}
+#country-selector a _-- {
+  color: inherit;
+}
+#country-selector button:hover {
+  -webkit-text-decoration: var(--link--hover--text-decoration, underline);
+          text-decoration: var(--link--hover--text-decoration, underline);
+}
+#country-selector button:focus {
+  border-radius: var(--link--focus--border-radius, 4px);
+  outline: var(--link--focus--border, 2px solid rgba(255, 255, 255, 0.4));
+  outline-offset: 0;
+}
+#country-selector button:focus:not(:focus-visible) {
+  outline: 0;
+}
+#country-selector.open .country-selector-toggle-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+#country-selector.open .country-control-toggle::after {
+  -webkit-transform: rotate(-0.25turn);
+          transform: rotate(-0.25turn);
+}
+#country-selector.open .countries-list {
+  max-height: 5000px;
+  -webkit-transition: max-height 1s linear 0s;
+  transition: max-height 1s linear 0s;
+}
+
+.country-selector-toggle-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 24px;
+  -webkit-transition: border 0s linear 0.5s;
+  transition: border 0s linear 0.5s;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.country-control-toggle {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: var(--site-footer--color, #fff);
+  cursor: pointer;
+  text-align: start;
+  white-space: nowrap;
+  width: 100%;
+}
+.country-control-toggle::before, .country-control-toggle::after {
+  background-color: var(--site-footer--color, #fff);
+  content: "";
+  display: inline-block;
+  width: 16px;
+}
+.country-control-toggle::before {
+  height: 20px;
+  -webkit-margin-end: 12px;
+          margin-inline-end: 12px;
+  -webkit-mask: url("../../images/gp-g-logo.png") 0 0/16px 20px no-repeat;
+          mask: url("../../images/gp-g-logo.png") 0 0/16px 20px no-repeat;
+  vertical-align: middle;
+}
+.country-control-toggle::after {
+  height: 12px;
+  -webkit-margin-start: 12px;
+          margin-inline-start: 12px;
+  -webkit-mask: url("../../images/chevron.svg") 0 0/16px 12px no-repeat;
+          mask: url("../../images/chevron.svg") 0 0/16px 12px no-repeat;
+  -webkit-transform: rotate(0.25turn);
+          transform: rotate(0.25turn);
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 300ms cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 300ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.countries-list {
+  font-weight: 500;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s cubic-bezier(0, 1.04, 0.38, 0.37) 0s;
+  transition: max-height 0.5s cubic-bezier(0, 1.04, 0.38, 0.37) 0s;
+}
+.countries-list _-- {
+  background: var(--site-footer--background, #05324c);
+}
+
+.countries-list .container {
+  padding: 24px 24px 32px 16px;
+}
+@media (min-width: 768px) {
+  .countries-list .container {
+    padding: 24px 0 32px;
+  }
+}
+
+.countries {
+  -webkit-column-count: 1;
+     -moz-column-count: 1;
+          column-count: 1;
+  list-style: none;
+  margin: 0;
+  -webkit-padding-start: 32px;
+          padding-inline-start: 32px;
+}
+@media (min-width: 768px) {
+  .countries {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
+.countries li {
+  font-size: 1rem;
+}
+.countries .international {
+  margin: 0;
+  padding: 0 0 32px 0;
+}
+.countries .lang-list {
+  font-weight: 400;
+  line-height: 24px;
+  list-style: none;
+  padding: 4px 0 0 0;
+}
+@media (min-width: 768px) {
+  .countries .lang-list {
+    -webkit-margin-end: 32px;
+            margin-inline-end: 32px;
+  }
+}
+.countries .lang-list > li {
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+
+.country-group .initial {
+  color: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 20px;
+  -webkit-margin-start: -32px;
+          margin-inline-start: -32px;
+  opacity: 0.5;
+  position: absolute;
+}
+html[dir=rtl] .country-group .initial {
+  text-transform: lowercase;
+}
+.country-group > ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+.country-group > ul > li {
+  display: inline-block;
+  line-height: 20px;
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+.country-control-close {
+  background-repeat: no-repeat;
+  border: none;
+  display: block;
+  float: right;
+  height: 16px;
+  -webkit-mask: url("../../images/cross.svg") 50% 50%/16px 16px no-repeat;
+          mask: url("../../images/cross.svg") 50% 50%/16px 16px no-repeat;
+  width: 16px;
+}
+.country-control-close _-- {
+  background-color: var(--site-footer--color, #fff);
+}
+html[dir=rtl] .country-control-close {
+  float: left;
+}

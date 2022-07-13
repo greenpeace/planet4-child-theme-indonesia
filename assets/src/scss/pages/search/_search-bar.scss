@@ -1,0 +1,61 @@
+.search-bar {
+  width: 100%;
+  background: transparentize($white, .7);
+  border: 1px solid $dark-blue;
+  padding: 24px 15px;
+  border-radius: 4px;
+
+  @include small-and-up {
+    padding: 32px;
+  }
+
+  input {
+    font-size: $font-size-sm;
+    height: 2.75em;
+    line-height: 2.75;
+    appearance: none;
+
+    @include large-and-up {
+      font-size: 1.125rem;
+      height: 3em;
+      line-height: 3;
+    }
+  }
+
+  .search-btn {
+    font-size: $font-size-sm;
+    line-height: 2.75;
+
+    svg {
+      margin-right: 4px;
+      vertical-align: baseline;
+    }
+
+    // We need this margin exception for tablets because otherwise the button moves to 2 lines.
+    @include medium-and-up {
+      svg {
+        margin-right: 0;
+      }
+    }
+
+    @include large-and-up {
+      margin-top: 2px;
+      line-height: 3;
+
+      svg {
+        margin-right: 4px;
+      }
+    }
+
+    i {
+      font-size: 1.125rem;
+      line-height: 0;
+      float: left;
+      margin-top: 22px;
+
+      @include large-and-up {
+        margin-top: 27px;
+      }
+    }
+  }
+}

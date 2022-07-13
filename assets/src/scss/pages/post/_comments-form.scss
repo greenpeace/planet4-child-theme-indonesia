@@ -1,0 +1,121 @@
+.comments-block {
+  .form-section .comment-respond {
+    background: $grey-05;
+    border-radius: 4px;
+    padding: 24px 16px;
+  }
+
+  .comment-respond {
+    font-size: 0;
+    margin-bottom: 32px;
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    .form-submit {
+      margin-bottom: 0;
+    }
+
+    button {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    @include medium-and-up {
+      .comment-author,
+      .comment-email {
+        width: calc(50% - 8px);
+        display: inline-block;
+        vertical-align: bottom;
+      }
+
+      .comment-author {
+        margin-inline-end: 16px;
+      }
+    }
+  }
+}
+
+#gdpr-comments-compliance {
+  font-family: $roboto;
+  margin-bottom: 8px;
+
+  #gdpr-comments-checkbox {
+    display: inline-block;
+    margin-inline-end: 8px;
+    width: inherit;
+  }
+
+  #gdpr-comments-label {
+    display: inline-block;
+    font-size: 14px;
+  }
+}
+
+.comment-form-cookies-consent input[type="checkbox"] ~ .custom-control-description {
+  font-size: 14px;
+}
+
+.logged-in-as {
+  font-size: 14px;
+  font-family: $roboto;
+}
+
+#cancel-comment-reply-link {
+  margin-inline-start: 8px;
+  color: $grey-40;
+
+  &:hover,
+  &:focus {
+    color: $grey-40;
+  }
+}
+
+@include medium-and-up {
+  .comment-form-cookies-consent {
+    margin-top: 8px;
+  }
+
+  .comments-block .form-section .comment-respond {
+    padding: 32px;
+
+    .logged-in-as {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+
+      html[dir="rtl"] & {
+        left: 32px;
+        right: auto;
+      }
+    }
+  }
+
+  .comments-block .comment-respond {
+    position: relative;
+
+    .logged-in-as {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      html[dir="rtl"] & {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  .logged-in-as {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+
+    html[dir="rtl"] & {
+      left: 32px;
+      right: auto;
+    }
+  }
+}
