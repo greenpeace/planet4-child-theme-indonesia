@@ -1,0 +1,64 @@
+.share-buttons {
+  display: flex;
+
+  .share-btn {
+    border: none;
+    color: $white;
+    font-size: $font-size-md;
+    opacity: 0.9;
+    width: 4rem;
+    text-align: center;
+    line-height: 2.7rem;
+    height: 2.7rem;
+    border-radius: 4px;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-inline-end: 8px;
+    }
+
+    .icon {
+      top: -2px;
+    }
+  }
+
+  .twitter {
+    background: $twitter;
+
+    &:hover,
+    &:active {
+      background: darken($twitter, 20%);
+    }
+  }
+
+  .facebook {
+    background: $facebook;
+
+    &:hover,
+    &:active {
+      background: darken($facebook, 20%);
+    }
+  }
+
+  .email {
+    background: $email;
+
+    &:hover,
+    &:active {
+      background: darken($email, 20%);
+    }
+  }
+
+  .whatsapp {
+    background: $whatsapp;
+
+    &:hover,
+    &:active {
+      background: darken($whatsapp, 20%);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+/*
+Error: Undefined variable: "$font-base-size".
+        on line 6 of /home/koko/p4/planet4-docker-compose/persistence/app/public/wp-content/themes/planet4-child-theme-indonesia/assets/src/scss/layout/navbar/languages.scss
+
+1: .nav-languages-toggle {
+2:   background: transparent;
+3:   border: none;
+4:   color: inherit;
+5:   display: none;
+6:   font-size: $font-base-size;
+7:   font-weight: 700;
+8:   padding: 0 20px;
+9: 
+10:   @include large-and-up {
+11:     border-inline-start: var(--top-navigation--separation, 1px solid transparentize($white, 0.5));
+
+Backtrace:
+/home/koko/p4/planet4-docker-compose/persistence/app/public/wp-content/themes/planet4-child-theme-indonesia/assets/src/scss/layout/navbar/languages.scss:6
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/usr/share/koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/usr/share/koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/usr/share/koala/bin/sass:22:in `load'
+/usr/share/koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$font-base-size\".\A         on line 6 of /home/koko/p4/planet4-docker-compose/persistence/app/public/wp-content/themes/planet4-child-theme-indonesia/assets/src/scss/layout/navbar/languages.scss\A \A 1: .nav-languages-toggle {\A 2:   background: transparent;\A 3:   border: none;\A 4:   color: inherit;\A 5:   display: none;\A 6:   font-size: $font-base-size;\A 7:   font-weight: 700;\A 8:   padding: 0 20px;\A 9: \A 10:   @include large-and-up {\A 11:     border-inline-start: var(--top-navigation--separation, 1px solid transparentize($white, 0.5));"; }

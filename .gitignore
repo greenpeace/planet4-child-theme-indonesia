@@ -1,0 +1,5 @@
+.vscode
+node_modules
+assets/build/
+storage.json
+prepros.config

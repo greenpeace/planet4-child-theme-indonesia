@@ -1,0 +1,42 @@
+@import "colors";
+
+// Fonts
+$roboto:     "Roboto", sans-serif;
+$lora:       "Lora", serif;
+$zodiacBul:  "Zodiac Stencil Bulgarian", sans-serif;
+$zodiac:  "Zodiac Sans", sans-serif !important;
+$poppins:  "Poppins", sans-serif;
+
+// Media queries
+$extra-small-width:       320px;
+$small-width:             576px;
+$medium-width:            768px;
+$large-width:             992px;
+$extra-large-width:       1200px;
+$extra-extra-large-width: 1600px;
+
+:root {
+  --top-navigation--background: #{$white};
+  --nav-link--color: #{$grey};
+}
+
+// Spacing
+@function space($base) {
+  @return $base * 8px;
+}
+$sp-x: space(0.5);
+$sp-1: space(1);
+$sp-1x: space(1.5);
+$sp-2: space(2);
+$sp-2x: space(2.5);
+$sp-3: space(3);
+$sp-3x: space(3.5);
+$sp-4: space(4);
+$sp-4x: space(4.5);
+$sp-5: space(5);
+$sp-5x: space(5.5);
+$sp-6: space(6);
+$sp-6x: space(6.5);
+$sp-7: space(7);
+$sp-7x: space(7.5);
+$sp-8: space(8);

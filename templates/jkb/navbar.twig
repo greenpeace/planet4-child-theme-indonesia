@@ -1,0 +1,38 @@
+{% block navigation_bar %}
+	<section id="header" class="fixed-top bg-light navbar navbar-expand-lg">
+		<div class="container">
+			<a class="site-logo" href="{{ site.url~'/jakartabutuhkita' }}">
+				{% include 'jkb/blocks/site_logo.twig' %}
+			</a>
+			<button class="d-none navbar-toggler pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<button class="navbar-toggler hamburger hamburger--spin" type="button" role="button" aria-label="Menu" aria-controls="navbarSupportedContent">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+			<div id="nav-main" class="w-100 w-lg-auto">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item menu-item">
+							<a class="nav-link btn btn__join" href="">
+								Gabung Sekarang
+							</a>
+						</li>
+						<li class="nav-item menu-item">
+							<a class="nav-link btn btn__donasi" href="https://act.greenpeace.org/page/59549/donate/1?utm_campaign=covid-19-response&utm_source=jrmanifestolandingpage&utm_medium=referral&utm_content=blog&utm_term=jrmanifesto">
+								Donasi
+							</a>
+						</li>
+						<li class="nav-item">
+							<a target="_blank" class="nav-link btn__backto_id btn--arrowleft" href="https://www.greenpeace.org/indonesia/">
+								ke Greenpeace Indonesia
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

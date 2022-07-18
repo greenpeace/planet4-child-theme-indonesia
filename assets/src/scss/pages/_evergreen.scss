@@ -1,0 +1,42 @@
+.page-template-evergreen {
+  .page-header {
+    .page-header-title {
+      max-width: 100%;
+    }
+
+    .page-header-background {
+      opacity: .3;
+    }
+
+    h1 {
+      color: $grey-80;
+      hyphens: none;
+      line-height: 1.2;
+    }
+  }
+
+  .page-content {
+    > {
+      p, blockquote,
+      h1, h2, h3, h4, h5, h6,
+      ul, ol {
+        @include large-and-up {
+          max-width: 65%;
+        }
+      }
+
+      hr.is-style-wide, hr.is-style-dots {
+        @include large-and-up {
+          max-width: 65%;
+          margin-left: 0;
+        }
+      }
+
+      hr:not(.is-style-wide):not(.is-style-dots) {
+        @include large-and-up {
+          margin-left: calc((65% - 100px) / 2);
+        }
+      }
+    }
+  }
+}

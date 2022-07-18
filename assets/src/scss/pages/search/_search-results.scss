@@ -1,0 +1,245 @@
+.search-result-list {
+  height: 150px;
+
+  @include small-and-up {
+    height: 120px;
+  }
+
+  @include large-and-up {
+    height: 235px;
+  }
+
+  @include x-large-and-up {
+    height: 208px;
+  }
+}
+
+.multiple-search-result {
+  height: 100%;
+  padding-top: 100px;
+
+  @include small-and-up {
+    padding-top: 32px;
+  }
+
+  ul {
+    li {
+      padding: 0 24px 32px 24px;
+      margin: 0 auto 24px;
+      border-bottom: 1px solid $grey-20;
+      position: relative;
+      align-items: flex-start;
+
+      .search-result-item-image {
+        width: 0;
+        margin-right: 0;
+        visibility: hidden;
+
+        img {
+          width: 100%;
+        }
+
+        @include small-and-up {
+          width: 25%;
+          min-width: 25%;
+          margin-inline-end: 32px;
+          visibility: visible;
+        }
+      }
+
+      .btn {
+        margin-top: 24px;
+
+        @include small-and-up {
+          width: max-content;
+        }
+      }
+
+      .search-result-item-image:hover ~ * .search-result-item-headline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .more-btn {
+    margin-top: 25px;
+
+    @include large-and-up {
+      margin-top: 35px;
+    }
+  }
+}
+
+.search-result-item-body {
+  .search-result-item-flex-title {
+    @include medium-and-up {
+      display: flex;
+    }
+    width: 100%;
+
+    > div:first-child {
+      width: 100%;
+    }
+  }
+
+  .btn-secondary {
+    width: 100%;
+
+    @include medium-and-up {
+      width: auto;
+      position: relative;
+      top: 5px;
+      padding: 0 15px;
+      margin-left: 12px;
+    }
+
+    i {
+      font-size: $font-size-sm;
+      font-weight: bold;
+      margin-right: 10px;
+      float: left;
+      line-height: 2.2rem;
+    }
+  }
+
+  .search-results-alternative-label {
+    display: none;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 $sp-2;
+    font-size: $font-size-sm;
+    font-weight: bold;
+    text-align: center;
+    background: #97ed90;
+    border-radius: 8px;
+    color: $grey-80;
+    word-break: keep-all;
+
+    &.search-results-alternative-label-mobile {
+      display: inline-block;
+      height: $sp-4;
+      line-height: $sp-4;
+      margin-bottom: 10px;
+
+      @include medium-and-up {
+        display: none;
+      }
+    }
+
+    @include medium-and-up {
+      padding: 0 $sp-4;
+      display: block;
+      width: auto;
+      position: relative;
+      top: 5px;
+      margin-left: 12px;
+    }
+
+    i {
+      font-size: $font-size-sm;
+      font-weight: bold;
+      margin-right: 10px;
+      float: left;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+.search-result-item-actionbox {
+  position: relative;
+  display: block;
+  width: 100%;
+  float: left;
+
+  @include small-and-up {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.search-result-item-headline {
+  font-size: 1.125rem;
+  color: $grey-80;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  line-height: normal;
+  margin-bottom: 10px;
+
+  @include small-and-up {
+    font-size: $font-size-lg;
+  }
+
+  @include large-and-up {
+    font-size: 1.625rem;
+  }
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: $grey-80;
+  }
+}
+
+.search-result-item-info {
+  font-style: italic;
+  color: $grey-60;
+  line-height: normal;
+  margin-bottom: 10px;
+  font-size: $font-size-xxs;
+
+  @include large-and-up {
+    font-size: $font-size-xs;
+  }
+}
+
+.search-result-item-content {
+  color: $grey-80;
+  font-size: $font-size-sm;
+  font-family: $lora;
+  line-height: 1.6;
+  margin: $sp-1 0 0;
+
+  @include large-and-up {
+    font-size: 1.125rem;
+  }
+}
+
+.search-result-item-author {
+  &:after {
+    content: "\2022";
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  a {
+    color: $grey-60;
+  }
+}
+
+.search-result-tags {
+  .search-result-item-title {
+    background: $grey-20;
+    color: $white;
+    font-weight: bold;
+    padding: 2px $sp-1;
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .tags {
+    @include mobile-only {
+      margin-top: 5px;
+    }
+  }
+
+  .search-result-item-tag {
+    &:before {
+      top: -2px;
+    }
+  }
+}

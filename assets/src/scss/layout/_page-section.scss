@@ -1,0 +1,22 @@
+.page-section-header _-- {
+  text-transform: none;
+  color: inherit;
+  font-weight: var(--headings--font-weight, bold);
+  font-family: var(--headings--font-family, $roboto);
+  font-size: 2.5rem;
+  margin-bottom: $sp-2;
+}
+
+.page-section-description {
+  margin-bottom: $sp-6;
+
+  @include medium-and-up {
+    width: 100%;
+  }
+
+  @include x-large-and-up {
+    .row & {
+      margin-top: 0;
+    }
+  }
+}

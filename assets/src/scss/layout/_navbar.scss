@@ -1,0 +1,372 @@
+$menu-height: 68px;
+$menu-height-large: 68px;
+$menu-height-small: 60px;
+$min-height: 40px;
+$navbar-default-height: 60px;
+
+.top-navigation {
+  _-- {
+    background: $dark-blue;
+    border-bottom: 0 transparent;
+    box-shadow: none;
+    color: $white;
+    fill: $white;
+    font-family: $roboto;
+    font-size: $font-base-size;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  .admin-bar & {
+    top: 46px;
+
+    @media (min-width: 783px) {
+      top: 32px;
+    }
+  }
+
+  @include large-and-up {
+    align-items: center;
+  }
+
+  input::placeholder _-- {
+    color: inherit;
+    opacity: 0.5;
+  }
+
+  button {
+    .icon {
+      _-- {
+        fill: var(--top-navigation--color, inherit);
+      }
+
+      height: 24px;
+      top: 0;
+      width: 24px;
+    }
+  }
+
+  .btn-donate {
+    _-- {
+      background: $orange;
+      border: none;
+      box-shadow: none;
+      color: $white;
+      font-size: inherit;
+      min-width: 116px;
+
+      &:hover {
+        background: $orange-hover;
+        border: none;
+        box-shadow: none;
+        color: $white;
+      }
+    }
+
+    height: 44px;
+    line-height: 40px;
+  }
+
+  .nav-donate {
+    padding: 16px 0;
+
+    @include large-and-up {
+      padding: 0;
+    }
+  }
+}
+
+#nav-main {
+  display: flex;
+
+  @include medium-and-less {
+    flex-direction: column-reverse;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    &.open {
+      inset-inline-start: 0;
+      transition: inset-inline-start 0.2s ease-out;
+
+      @supports not (inset-inline-start: 0) {
+        transform: translateX(0);
+        transition: transform 0.2s ease-out;
+
+        html[dir="rtl"] & {
+          transform: translateX(0);
+        }
+      }
+
+      ~ .top-navigation-overlay {
+        display: block;
+      }
+    }
+
+    .admin-bar & {
+      padding-bottom: 46px;
+      top: 46px;
+
+      @media (min-width: 783px) {
+        padding-bottom: 32px;
+        top: 32px;
+      }
+    }
+  }
+
+  @include small-and-less {
+    width: 100vw;
+    inset-inline-start: -100vw;
+
+    @supports not (inset-inline-start: -100vw) {
+      transform: translateX(-100vw);
+      transition: transform 0.2s ease-out;
+
+      html[dir="rtl"] & {
+        transform: translateX(100vw);
+      }
+    }
+
+    &.open {
+      @supports not (inset-inline-start: 0) {
+        transform: translateX(0);
+        transition: transform 0.2s ease-out;
+
+        html[dir="rtl"] & {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  @include small-to-large {
+    inset-inline-start: -400px;
+    transition: inset-inline-start 0.2s ease-in;
+    width: 400px;
+
+    @supports not (inset-inline-start: -400px) {
+      transform: translateX(-400px);
+      transition: transform 0.2s ease-in;
+
+      html[dir="rtl"] & {
+        transform: translateX(400px);
+      }
+    }
+  }
+
+  @include large-and-up {
+    flex-grow: 1;
+    width: auto;
+  }
+}
+
+.nav-menu {
+  background: var(--top-navigation--background, $dark-blue);
+  height: 100%;
+  top: 0;
+  width: auto;
+  z-index: 4;
+
+  @include medium-and-less {
+    display: block;
+    overflow-y: auto;
+  }
+
+  @include large-and-up {
+    background: inherit;
+    display: flex;
+    flex-grow: 1;
+    height: auto;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-inline: 40px 12px;
+    padding-top: 16px;
+    text-align: start;
+
+    @include large-and-up {
+      display: flex;
+      flex-grow: 1;
+      justify-content: end;
+      padding-inline-end: 0;
+      padding-top: 0;
+      text-align: end;
+    }
+  }
+}
+
+.nav-item {
+  color: inherit;
+  font-size: $font-base-size;
+  font-weight: 700;
+
+  @include large-and-up {
+    line-height: $menu-height;
+    margin: 0 20px;
+  }
+}
+
+a.nav-link {
+  --nav-link-- {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration-color: $gp-green;
+    }
+  }
+
+  opacity: 1;
+  display: inline-block;
+  padding: $sp-2 0;
+  position: relative;
+  width: 100%;
+
+  @include large-and-up {
+    padding: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: auto;
+    text-underline-position: under;
+
+    @include large-and-up {
+      text-decoration-line: none;
+    }
+  }
+
+  // Border-bottom for underline animation
+  &:before {
+    border-bottom-color: var(--nav-link--hover--text-decoration-color, $gp-green);
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    z-index: -1;
+  }
+}
+
+.active a.nav-link {
+  --nav-link-active-- {
+    color: var(--nav-link--color, $white);
+    text-decoration-color: $gp-green;
+  }
+
+  opacity: 1;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: auto;
+  text-underline-position: under;
+
+  @include large-and-up {
+    text-decoration-line: none;
+    text-decoration-thickness: 4px;
+  }
+}
+
+// Underline animation with border-bottom
+a.nav-link:hover:before,
+.active a.nav-link:before {
+  @include large-and-up {
+    transform: scaleX(1);
+    transition: transform 0.25s;
+  }
+}
+
+.nav-menu-toggle {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 0 24px;
+
+  @include large-and-up {
+    display: none;
+  }
+}
+
+.nav-menu-close {
+  background-color: var(--top-navigation--color, $white);
+  border: none;
+  display: block;
+  height: 68px;
+  inset-inline-end: 0;
+  mask: url("../../images/cross.svg") 50% 50%/16px 16px no-repeat;
+  position: absolute;
+  top: 0;
+  width: 68px;
+  z-index: 5;
+
+  @include medium-and-less {
+    @supports not (inset-inline-end: 0) {
+      right: 0;
+      left: auto;
+
+      html[dir="rtl"] & {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  @include large-and-up {
+    display: none;
+  }
+}
+
+.navigation-bar_min {
+  --top-navigation-min-- {
+    height: $min-height;
+  }
+
+  justify-content: center;
+
+  @include large-and-up {
+    justify-content: flex-start;
+  }
+}
+
+.top-navigation-overlay {
+  display: none;
+  background: $black;
+  height: 100%;
+  opacity: 0.5;
+  overflow: hidden;
+  overflow-y: scroll;
+  pointer-events: all;
+  position: fixed;
+  top: 0;
+  width: calc(100% + 20px);
+  z-index: 4;
+}
+
+.no-scroll-nav-open {
+  @include medium-and-less {
+    overflow-y: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+// I'll include these at the end for now because they depend on CSS order.
+@import "navbar/site-logo";
+@import "navbar/languages";
+@import "navbar/search";
+@import "navbar/mobile";

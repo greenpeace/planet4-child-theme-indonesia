@@ -1,0 +1,52 @@
+.top-page-tags {
+  font-size: 16px;
+  margin-bottom: $sp-1;
+  font-family: $roboto;
+
+  .tag-wrap {
+    display: inline;
+    position: relative;
+  }
+
+  .category-separator,
+  .tag-wrap-bullet {
+    pointer-events: none;
+    font-weight: 400;
+    margin-inline-end: $sp-1;
+    color: $link-color;
+  }
+
+  .tag-wrap-bullet {
+    margin-inline-start: $sp-1;
+  }
+
+  .tag-item {
+    _-- {
+      color: $link-color;
+      font-weight: 500;
+
+      &:visited {
+        color: $link-color-visited;
+      }
+    }
+    display: inline-block;
+
+    &:not(:only-child):not(:last-child):not(.page-type) {
+      margin-inline-end: $sp-1;
+    }
+  }
+
+  .main-tag-chevron {
+    pointer-events: none;
+    margin: 0 $sp-1;
+    height: 12px;
+    width: 7px;
+    mask-image: url("../../images/chevron.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-repeat: no-repeat;
+    background-color: $link-color;
+    display: inline-block;
+  }
+}
