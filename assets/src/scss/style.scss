@@ -455,22 +455,14 @@ body[data-page=""] .pswp {
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: auto;
+      width: 100%;
       z-index: -1;
 
       video {
         height: 100vh;
-        width: auto;
-      }
-
-      @include medium-and-up {
-        height: auto;
+        object-fit: cover;
+        object-position: center;
         width: 100%;
-
-        video {
-          height: auto;
-          width: 100%;
-        }
       }
     }
 
