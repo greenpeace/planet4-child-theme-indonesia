@@ -1365,8 +1365,12 @@ body[data-page=""] .pswp {
 
   @include large-and-up {
     background-position: right center;
-    background-size: contain;
+    background-size: 47%;
     padding-bottom: 3rem;
+  }
+
+  @include xx-large-and-up {
+    background-size: contain;
   }
 
   .bg__form {
