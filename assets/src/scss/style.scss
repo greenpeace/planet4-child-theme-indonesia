@@ -455,22 +455,14 @@ body[data-page=""] .pswp {
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: auto;
+      width: 100%;
       z-index: -1;
 
       video {
         height: 100vh;
-        width: auto;
-      }
-
-      @include medium-and-up {
-        height: auto;
+        object-fit: cover;
+        object-position: center;
         width: 100%;
-
-        video {
-          height: auto;
-          width: 100%;
-        }
       }
     }
 
@@ -503,7 +495,7 @@ body[data-page=""] .pswp {
     &::before,
     &::after {
       content: "";
-      cursor: pointer;
+      pointer-events: none;
       position: absolute;
       opacity: 0;
       transition: all .3s
@@ -537,6 +529,12 @@ body[data-page=""] .pswp {
       left: 46px;
       width: 0;
       z-index: 3;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+      z-index: 4;
     }
   }
 
@@ -1367,8 +1365,12 @@ body[data-page=""] .pswp {
 
   @include large-and-up {
     background-position: right center;
-    background-size: contain;
+    background-size: 47%;
     padding-bottom: 3rem;
+  }
+
+  @include xx-large-and-up {
+    background-size: contain;
   }
 
   .bg__form {
