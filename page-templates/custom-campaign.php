@@ -13,7 +13,7 @@ $post           = new Post(); // phpcs:ignore WordPress.WP.GlobalVariablesOverri
 $page_meta_data = get_post_meta( $post->ID );
 $page_meta_data = array_map( 'reset', $page_meta_data );
 
-$post_slug = ($post->parent() && $post->parent()->slug == 'jakartabutuhkita') ? $post->slug : '';
+$post_slug = ($post->parent() && $post->parent()->slug == 'jakarta-butuh-kita') ? $post->slug : '';
 
 $context['post']                = $post;
 $context['header_video'] = get_stylesheet_directory_uri().'/assets/media/ndcseries.mp4';
