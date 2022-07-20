@@ -23,13 +23,6 @@ function Home() {
   let tlQuality = gsap.timeline({ paused: true })
   let tvc = document.querySelector('video')
 
-  tvc.removeAttribute('controls')
-  tvc.setAttribute('muted', true)
-  tvc.setAttribute('autoplay', 'autoplay')
-  tvc.setAttribute('loop', true)
-  tvc.setAttribute('playsinline', true)
-  tvc.setAttribute('allow', 'accelerometer; autoplay; encrypted-media;')
-
   // Timeline of jkb-banner
   tlBanner.fromTo('.jkb-banner h1', { y: 50 }, { y: 0, opacity: 1, immediateRender: false, duration: 0.6 })
     .fromTo('.jkb-banner p', { y: 50 }, { y: 0, opacity: 1, immediateRender: false, duration: 0.6, delay: -.4 })
@@ -116,6 +109,14 @@ function Home() {
     tlMasalah.play()
     tlQuality.play()
     document.querySelector('.jkb-quality h2').classList.remove('done')
+
+    Array.from(document.querySelectorAll('.to-form-join')).forEach(elm => {
+      if (elm.querySelector('a')) {
+        elm.querySelector('a').addEventListener('click', function() {
+          document.getElementById('form-join').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+        })
+      }
+    })
   }
 
   // SPLIT TEXT CAPTION MASALAH UTAMA
@@ -149,8 +150,8 @@ function Home() {
 
       iframe.src = video
       iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-      iframe.width = '560'
-      iframe.height = '315'
+      iframe.width = '720'
+      iframe.height = '405'
       iframe.style.border = "none";
 
       wrapper.appendChild(iframe)

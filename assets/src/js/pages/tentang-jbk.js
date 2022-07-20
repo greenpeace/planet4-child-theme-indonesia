@@ -69,6 +69,14 @@ function Tentang() {
     tlAbout.play()
     tlAbout2.play()
     tlAboutTVC.play()
+
+    Array.from(document.querySelectorAll('.to-form-join')).forEach(elm => {
+      if (elm.querySelector('a')) {
+        elm.querySelector('a').addEventListener('click', function() {
+          document.getElementById('form-join').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+        })
+      }
+    })
   }
 
 }
