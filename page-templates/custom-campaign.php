@@ -12,8 +12,10 @@ $context        = Timber::get_context();
 $post           = new Post(); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 $page_meta_data = get_post_meta( $post->ID );
 $page_meta_data = array_map( 'reset', $page_meta_data );
+$template_path = get_post_meta(get_the_ID(), '_wp_page_template', true);
+$template_theme = wp_get_theme()->get_page_templates();
 
-$post_slug = ($post->parent() && $post->parent()->slug == 'jakarta-butuh-kita') ? $post->slug : '';
+$post_slug = ($template_theme[$template_path] == 'Jakarta Butuh Kita Campaign Page') ? $post->slug : '';
 
 $context['post']                = $post;
 $context['header_video'] = get_stylesheet_directory_uri().'/assets/media/ndcseries.mp4';
