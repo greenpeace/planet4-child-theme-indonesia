@@ -3,8 +3,25 @@
 {% block content %}
 	<div class="container-fluid jkb-page {{ (post_slug != '') ? 'jkb-subpage' : '' }}" id="fullpage" data-order="1" data-page="{{ post_slug }}">
 		{{ post.content|raw }}
+		<div class="section fp-auto-height" id="form-join" data-section="form-join">
+			<div class="container-fluid jkb-form">
+				<div class="row">
+					<div class="col-12">
+						<div class="container">
+							<div class="row">
+								<div class="col-12 col-lg-8">
+									<h2>BERSAMA KITA BISA MEMBUAT PERUBAHAN</h2>
+									<p>Bergabung sekarang untuk mendapatkan informasi terbaru seputar kampanye lingkungan</p>
+									<div data-render="planet4-blocks/happypoint" data-attributes="{&quot;attributes&quot;:{&quot;opacity&quot;:1,&quot;embed_code&quot;:&quot;<!--[if lte IE 8]>\n<script charset=\&quot;utf-8\&quot; type=\&quot;text\/javascript\&quot; src=\&quot;\/\/js.hsforms.net\/forms\/v2-legacy.js\&quot;><\/script>\n<![endif]-->\n<script charset=\&quot;utf-8\&quot; type=\&quot;text\/javascript\&quot; src=\&quot;\/\/js.hsforms.net\/forms\/v2.js\&quot;><\/script>\n<script>\n  hbspt.forms.create({\nregion: \&quot;na1\&quot;,\nportalId: \&quot;20341912\&quot;,\nformId: \&quot;75638193-e807-46c2-bfee-826be04f0a9b\&quot;\n});\n<\/script>&quot;,&quot;override_default_content&quot;:true,&quot;local_content_provider&quot;:&quot;embed_code&quot;,&quot;iframe_url&quot;:&quot;&quot;}}"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="section fp-auto-height">
 			{% include 'jkb/blocks/footer.twig' with { 'nav_type' : custom_styles.nav_type } %}
-		</div/
+		</div>
 	</div>
 {% endblock %}
