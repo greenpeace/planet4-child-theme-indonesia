@@ -150,8 +150,8 @@ function Home() {
 
       iframe.src = video
       iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-      iframe.width = '560'
-      iframe.height = '315'
+      iframe.width = '720'
+      iframe.height = '405'
       iframe.style.border = "none";
 
       wrapper.appendChild(iframe)
