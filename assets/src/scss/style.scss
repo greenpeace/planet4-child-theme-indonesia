@@ -51,6 +51,11 @@ $hamburger-layer-color : #6dbd44 !default;
   --text--line-height: 1.8;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .hamburger {
   padding-right: 0;
 
@@ -1366,10 +1371,11 @@ body[data-page=""] .pswp {
   @include large-and-up {
     background-position: right center;
     background-size: 47%;
-    padding-bottom: 3rem;
+    padding-bottom: 0rem;
   }
 
   @include xx-large-and-up {
+    background-position: right 3rem;
     background-size: contain;
   }
 
@@ -1492,7 +1498,8 @@ body[data-page=""] .pswp {
 
 #fp-nav ul {
   li {
-    &:last-child {
+    &:last-child,
+    &:nth-last-child(2) {
       display: none;
     }
   }

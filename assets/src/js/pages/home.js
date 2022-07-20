@@ -93,6 +93,23 @@ function Home() {
         }
       }
     });
+
+    function toFormJoin(e) {
+      e.preventDefault();
+
+      let sectionIndex = document.querySelectorAll('.section').length - 1
+      homeFP.moveTo(sectionIndex)
+      
+      return false
+    }
+
+    Array.from(document.querySelectorAll('.to-form-join')).forEach(elm => {
+      if (elm.querySelector('a')) {
+        elm.querySelector('a').addEventListener('click', toFormJoin)
+      } else {
+        elm.addEventListener('click', toFormJoin)
+      }
+    })
   } else {
     tlBanner.play()
     tlTentang.play()
