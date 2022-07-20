@@ -6,7 +6,7 @@ window.onload = function () {
   const menuContent = document.getElementById('navbarSupportedContent')
   const btnJoinNavbar = document.querySelector('.nav-link.btn__join')
 
-  if (pageSlug == '') Loadpage.Home()
+  if (pageSlug == '' || pageSlug == 'jakarta-butuh-kita' || pageSlug == 'jakartabutuhkita') Loadpage.Home()
   else if (pageSlug == 'tentang-jakarta-butuh-kita') Loadpage.About()
   else if (pageSlug == 'tiga-masalah-utama-kota-jakarta') Loadpage.Issues()
 
