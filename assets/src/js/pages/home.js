@@ -139,6 +139,7 @@ function Home() {
   let popupTVC = document.querySelector('.jkb-tentang .wp-block-embed')
   let navbarHeader = document.getElementById('header')
   let navPage = document.getElementById('fp-nav')
+  let videoTVC = document.querySelector('.tvc__layout video')
 
   function embedTVC(lty) {
     if (!document.querySelector('.jkb-tentang .tvc__layout')) {
@@ -169,9 +170,11 @@ function Home() {
 
     navbarHeader.style.cssText = "transform: translateY(-120%)";
     if (window.innerWidth > 992) navPage.style.cssText = "right: -10%";
-    embedTVC(elm.parentElement)
+    // embedTVC(elm.parentElement)
+    document.querySelector('.tvc__layout').classList.add('show')
     setTimeout(() => {
       document.querySelector('.tvc__layout').classList.add('done')
+      videoTVC.play()
     }, 1000);
   }
 
@@ -180,12 +183,14 @@ function Home() {
 
     if (popupTVC) {
       if (popupTVC.classList.contains('done')) {
-        let targetEl = popupTVC.querySelector('iframe').contains(evt.target)
+        let targetEl = popupTVC.querySelector('video').contains(evt.target)
 
         if (!targetEl) {
           popupTVC.classList.remove('show', 'done')
           navbarHeader.style.cssText = "transform: translateY(0%)";
           if (window.innerWidth > 992) navPage.style.cssText = "";
+
+          videoTVC.pause()
         }
       }
     }
