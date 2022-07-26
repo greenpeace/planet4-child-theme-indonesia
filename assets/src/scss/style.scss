@@ -521,7 +521,9 @@ body[data-page=""] .pswp {
       border-radius: 50%;
       bottom: calc(100px - 70px);
       height: 100px;
-      left: -50px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       width: 100px;
       z-index: 2;
     }
@@ -532,7 +534,9 @@ body[data-page=""] .pswp {
       border-left: 15px solid white;
       bottom: calc(10px + 57px);
       height: 0;
-      left: calc(50px - 53px);
+      left: calc(50% + 3px);
+      top: 50%;
+      transform: translate(-50%, -50%);
       width: 0;
       z-index: 3;
     }
