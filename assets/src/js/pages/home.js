@@ -31,11 +31,7 @@ function Home() {
   // Timeline of jkb-tentang
   tlTentang.fromTo('.jkb-tentang h2', { x: -150 }, { x: 0, opacity: 1, immediateRender: false, duration: 0.6 })
     .fromTo('.jkb-tentang p', { x: -150 }, { x: 0, opacity: 1, immediateRender: false, duration: 0.6, delay: -.4 })
-    .fromTo('.jkb-tentang .tentang-tvc', { x: 150 }, {
-      x: 0, opacity: 1, immediateRender: false, duration: 0.6, delay: -.5, onComplete: function () {
-        document.querySelector('.jkb-tentang .tentang-tvc').classList.add('done')
-      }
-    })
+    .fromTo('.jkb-tentang .tentang-tvc', { opacity: 0 }, { opacity: 1, immediateRender: false, duration: 0.6, delay: -.5 })
     .fromTo('.jkb-tentang a', { x: -150 }, { x: 0, opacity: 1, immediateRender: false, duration: 0.6, delay: -.25 })
 
   // Timeline of jkb-masalah
