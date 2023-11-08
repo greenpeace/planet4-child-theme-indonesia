@@ -14,6 +14,9 @@
 		{
 			"type": "composer",
 			"url": "https://wpackagist.org"
+			"only": [
+                		"wpackagist-plugin/*",
+               			"wpackagist-theme/*"
 		}
 	],
 	"support": {
